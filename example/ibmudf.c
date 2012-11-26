@@ -1,5 +1,5 @@
 
-#include<stdio.h>
+// #include<stdio.h>
 // following headers are required for UDF
 #include<sqludf.h>
 #include<sql.h>
