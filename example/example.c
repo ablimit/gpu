@@ -15,7 +15,7 @@ void SQL_API_FN example(
 	SQLUDF_NULLIND *outNullInd,
 	SQLUDF_TRAIL_ARGS)
 {
-	sscanf(poly, "%d", out);
-	*outNullInd = 0;
-	return;
+    sscanf(poly, "%d", out);
+    *outNullInd = 0;
+    return;
 }

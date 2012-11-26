@@ -1,3 +1,4 @@
+-- Java example 
 CREATE FUNCTION GoogleContacts(user varchar(80), pass varchar(30))
 RETURNS TABLE (firstname VARCHAR(80), lastname VARCHAR(80), nickname VARCHAR(160), email VARCHAR(80), phone VARCHAR(80))
 EXTERNAL NAME 'derycke.GoogleContactsUDF.retrieveContacts'
@@ -7,3 +8,17 @@ FENCED
 NO SQL
 DISALLOW PARALLEL
 FINAL CALL;
+
+
+-- c example 
+CREATE FUNCTION product( in1 DOUBLE, in2 DOUBLE )
+RETURNS DOUBLE
+LANGUAGE C
+PARAMETER STYLE SQL
+NO SQL 
+FENCED THREADSAFE
+DETERMINISTIC 
+RETURNS NULL ON NULL INPUT
+NO EXTERNAL ACTION
+EXTERNAL NAME 'c_rtns!product' ;
+
