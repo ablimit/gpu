@@ -1,0 +1,9 @@
+CREATE FUNCTION GoogleContacts(user varchar(80), pass varchar(30))
+RETURNS TABLE (firstname VARCHAR(80), lastname VARCHAR(80), nickname VARCHAR(160), email VARCHAR(80), phone VARCHAR(80))
+EXTERNAL NAME 'derycke.GoogleContactsUDF.retrieveContacts'
+LANGUAGE JAVA
+PARAMETER STYLE DB2GENERAL
+FENCED
+NO SQL
+DISALLOW PARALLEL
+FINAL CALL;
